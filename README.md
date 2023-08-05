@@ -1,16 +1,5 @@
 # flutter_request_adapter
 
-A new Flutter project.
+Flutter project to demonstrate usage of a adapter to quickly change dependencies for http requests.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The project will use http requests via the following projects: [dio](https://pub.dev/packages/dio) and [http](https://pub.dev/packages/http)
