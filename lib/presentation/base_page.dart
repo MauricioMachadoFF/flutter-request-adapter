@@ -1,6 +1,6 @@
+import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_request_adapter/core/failures.dart';
 import 'package:flutter_request_adapter/presentation/blocs/pokemon_getter/pokemon_getter_cubit.dart';
 
 class HomePage extends StatefulWidget {

@@ -1,5 +1,5 @@
+import 'package:core/core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_request_adapter/core/failures.dart';
 import 'package:flutter_request_adapter/domain/usecase/get_single_pokemon.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
