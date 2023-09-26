@@ -1,18 +1,18 @@
 import 'dart:convert';
 
+import 'package:core/core.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flutter_request_adapter/core/exception.dart';
 import 'package:http/http.dart';
 
 import 'request_client.dart';
 
 class HttpAdapter implements RequestClient {
-  final Client client;
+  final Client _client;
   final String baseUrl;
-  const HttpAdapter({
-    required this.client,
+
+  HttpAdapter({
     required this.baseUrl,
-  });
+  }) : _client = Client();
 
   @override
   Future<Either<CustomException, dynamic>> get({
@@ -20,7 +20,7 @@ class HttpAdapter implements RequestClient {
   }) async {
     try {
       final url = Uri.parse(baseUrl + path);
-      final result = await client.get(url);
+      final result = await _client.get(url);
       final exception = _mapStatusCodeToException(result.statusCode);
       if (exception != null) {
         return Left(exception);
@@ -41,6 +41,7 @@ class HttpAdapter implements RequestClient {
       case 404:
         return const NotFoundException();
       case 500:
+      default:
         return const UnhandledException();
     }
   }
